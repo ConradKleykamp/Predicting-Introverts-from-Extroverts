@@ -18,6 +18,8 @@ The model used for this project is a [LightGBM](https://github.com/microsoft/Lig
 
 In order to identify the best model parameters, I use [Optuna](https://optuna.org/), which is a hyperparameter optimization framework. Optuna will create and run through 100 trials to determine the ideal hyperparameters for the final LGBM model.
 
+To further boost accuracy, I also use ensemble learning. This is a technique that combines multiple models to improve predictive performance. The final, tuned LGBM model will be combined with XGBoost and CatBoost models.
+
 I hope you find this project interesting! If you have any questions or suggestions for improvement, please let me know. I am always looking to improve my data skills!
 
 ---
@@ -57,6 +59,7 @@ Libraries Used
 - catboost
 - sklearn
 - lightgbm
+- xgboost
 - optuna
 - tqdm
 - shap
@@ -64,12 +67,19 @@ Libraries Used
 ---
 
 ### Results
-<img width="720" height="557" alt="image" src="https://github.com/user-attachments/assets/ad13334f-8f2f-48f6-a96b-b1bec9be280c" />
+<img width="720" height="557" alt="image" src="https://github.com/user-attachments/assets/adc52a0d-dde7-4c6e-bece-b86522c69d51" />
 
-<img width="744" height="463" alt="image" src="https://github.com/user-attachments/assets/188e65b2-0ac4-4ad2-b521-bf524c63bb5b" />
+<img width="530" height="441" alt="image" src="https://github.com/user-attachments/assets/f73fda9f-8cfe-4125-a3c7-06ac633f448d" />
 
-Final Model Performance
+<img width="777" height="463" alt="image" src="https://github.com/user-attachments/assets/9946eded-d7f2-4b86-b2a8-431683017cf6" />
 
-Across folds the best accuracy score of the model was 0.97084 and the mean accuracy score was 0.96864. In terms of competition scoring, the model yielded an accuracy of 97.2469% (public score).
 
-In terms of feature importance, 'Friends_circle_size' was the most impactful feature on the model, followed by 'Social_event_attendance'.
+Final Model Performance: LGBM
+
+Across folds the best accuracy score of the final LGBM model was 0.97138 and the mean accuracy score was 0.96901.
+
+In terms of feature importance, 'Time_spent_alone' was the most impactful feature on the model, followed closely by 'Friends_circle_size'.
+
+Ensemble Performance
+
+By combining the tuned LGBM model with XGBoost and CatBoost models, I was able to achieve higher accuracy. In terms of competition scoring, the ensemble model yielded an accuracy of 97.4089% (public score).
