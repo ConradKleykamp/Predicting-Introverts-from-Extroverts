@@ -67,19 +67,18 @@ Libraries Used
 ---
 
 ### Results
-<img width="720" height="557" alt="image" src="https://github.com/user-attachments/assets/adc52a0d-dde7-4c6e-bece-b86522c69d51" />
+<img width="720" height="557" alt="image" src="https://github.com/user-attachments/assets/a408426c-dfd7-45bc-929b-0b7fb38f369b" />
 
-<img width="530" height="441" alt="image" src="https://github.com/user-attachments/assets/f73fda9f-8cfe-4125-a3c7-06ac633f448d" />
+<img width="530" height="441" alt="image" src="https://github.com/user-attachments/assets/73518c53-caa6-4a74-87e0-2445adc8b897" />
 
-<img width="777" height="463" alt="image" src="https://github.com/user-attachments/assets/9946eded-d7f2-4b86-b2a8-431683017cf6" />
-
+<img width="777" height="463" alt="image" src="https://github.com/user-attachments/assets/a727c33e-52e8-438c-80f0-abc63d6fded0" />
 
 Final Model Performance: LGBM
 
-Across folds the best accuracy score of the final LGBM model was 0.97138 and the mean accuracy score was 0.96901.
+Across folds the best accuracy score of the final LGBM model was 0.97085 and the mean accuracy score was 0.96891.
 
-In terms of feature importance, 'Time_spent_alone' was the most impactful feature on the model, followed closely by 'Friends_circle_size'.
+In terms of feature importance, 'Social_x_Friends' was the most impactful feature on the model. The second most impactful feature was 'Time_spent_Alone'.
 
 Ensemble Performance
 
-By combining the tuned LGBM model with XGBoost and CatBoost models, I was able to achieve higher accuracy. In terms of competition scoring, the ensemble model yielded an accuracy of 97.4089% (public score).
+By combining the tuned LGBM model with XGBoost and CatBoost models, I was able to achieve higher accuracy. In terms of competition scoring, the ensemble model yielded an accuracy of 97.4898% (public score).
